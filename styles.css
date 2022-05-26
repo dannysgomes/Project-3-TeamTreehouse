@@ -156,3 +156,44 @@ input[type="radio"]:checked {
 input[type="checkbox"] {
   margin-right: 10px;
 }
+
+@media (min-width: 768px) {
+
+  main {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .group {
+    flex-direction: row;
+      }
+
+      .group .zip-state-label {
+        width: 146px;
+      } 
+  .group label {
+    width: 150px;
+     }
+
+  label {
+    padding: 5px;
+  }
+
+  .group input {
+    width: 100%;
+  }
+
+  .group #zipcode, .group #state{
+    width: 100%;
+  }
+
+  #msg {
+    width: 100%;
+  }
+.desktop-group {
+  flex-direction: column;
+}
+.desktop-group .desktop-textarea-label {
+  width: 100%;
+}
+}
