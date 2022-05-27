@@ -70,6 +70,11 @@ fieldset {
   padding: 10px 10px;
 }
 
+#zip-state-label .zip{
+  width: 50%;
+}
+
+
 .group {
   display: flex;
   flex-direction: column;
@@ -80,10 +85,6 @@ fieldset {
   color: rgb(96, 97, 110);
   font-size: 0.75rem;
   margin-bottom: 10px;
-}
-
-#zipcode {
-  width: 50%;
 }
 
 .label {
@@ -169,7 +170,7 @@ input[type="checkbox"] {
       }
 
       .group .zip-state-label {
-        width: 146px;
+        width: 150px;
       } 
   .group label {
     width: 150px;
@@ -195,5 +196,4 @@ input[type="checkbox"] {
 }
 .desktop-group .desktop-textarea-label {
   width: 100%;
-}
 }
