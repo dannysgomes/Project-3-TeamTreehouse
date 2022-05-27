@@ -7,6 +7,11 @@ fieldset {
   border: 0;
 }
 
+.bottom {
+  background:rgb(229, 229, 233);
+  padding: 20px;
+}
+
 .default {
   background-color: black;
   color: white;
@@ -50,6 +55,7 @@ input {
   border-radius: 0.25em;
   border: none;
   padding: 10px 10px;
+  color:rgb(30, 30, 31)
 }
 
 fieldset {
@@ -66,13 +72,14 @@ fieldset {
   border-color: rgb(96, 97, 110);
   border-radius: 0.25em;
   border: none;
-  color: rgb(96, 97, 110);
+  color: rgb(30, 30, 31);
   padding: 10px 10px;
 }
 
-#zip-state-label .zip{
+input#zipcode {
   width: 50%;
 }
+
 
 
 .group {
@@ -129,8 +136,13 @@ legend {
   font-style: italic;
 }
 
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid rgb(85, 85, 228);
+}
+
 input:focus {
-  outline: 1px solid navy;
+  transform: scale(1.05);
+  transition: all 2s ease;
 }
 
 input[type="radio"] {
@@ -196,4 +208,5 @@ input[type="checkbox"] {
 }
 .desktop-group .desktop-textarea-label {
   width: 100%;
+}
 }
