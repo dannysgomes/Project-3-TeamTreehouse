@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Merriweather", sans-serif;
   font-size: 1rem;
@@ -8,8 +13,12 @@ fieldset {
 }
 
 .bottom {
-  background:rgb(229, 229, 233);
-  padding: 20px;
+  background: rgb(229, 229, 233);
+  padding: 20px 20px 5px;
+}
+
+main {
+  margin: 20px;
 }
 
 .default {
@@ -20,8 +29,12 @@ fieldset {
   font-size: 15px;
   margin: -10px;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
+}
+
+legend {
+  font-weight: bold;
 }
 
 .top {
@@ -43,15 +56,19 @@ p {
 .divA {
   border-bottom: 2px solid black;
   height: 1px;
+  margin-bottom: 1.5px;
 }
+
 .divB {
   border-bottom: 1px solid black;
   height: 1px;
+  margin-bottom: 25px;
 }
 
-h2 {
+legend {
   font-size: 15px;
   text-align: left;
+  margin-bottom: 25px;
 }
 
 input {
@@ -59,7 +76,7 @@ input {
   border-radius: 0.25em;
   border: none;
   padding: 10px 10px;
-  color:rgb(30, 30, 31)
+  color: rgb(30, 30, 31);
 }
 
 fieldset {
@@ -83,8 +100,6 @@ fieldset {
 input#zipcode {
   width: 50%;
 }
-
-
 
 .group {
   display: flex;
@@ -127,7 +142,7 @@ input#zipcode {
 p {
   margin-bottom: 10px;
   font-size: 0.75rem;
-  text-align: left
+  text-align: left;
 }
 
 .submit {
@@ -140,9 +155,12 @@ p {
 .footer {
   font-style: italic;
   text-align: center;
+  padding-top: 10px;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: 2px solid rgb(85, 85, 228);
 }
 
@@ -171,28 +189,39 @@ input[type="radio"]:checked {
   padding: 1px;
 }
 
-
 input[type="checkbox"] {
   margin-right: 10px;
 }
 
 @media (min-width: 768px) {
-
   main {
     width: 50%;
     margin: 0 auto;
   }
 
+  input#zipcode {
+    width: 25%;
+  }
+
+  .group #zipcode {
+    width: 25%;
+  }
+
   .group {
     flex-direction: row;
-      }
+  }
 
-      .group .zip-state-label {
-        width: 150px;
-      } 
-  .group label {
+  .group .state-label {
     width: 150px;
-     }
+  }
+
+  .group label {
+    min-width: 150px;
+  }
+
+  label.zip-label {
+    width: 150px;
+  }
 
   label {
     padding: 5px;
@@ -202,17 +231,17 @@ input[type="checkbox"] {
     width: 100%;
   }
 
-  .group #zipcode, .group #state{
+  .group #state {
     width: 100%;
   }
 
   #msg {
     width: 100%;
   }
-.desktop-group {
-  flex-direction: column;
-}
-.desktop-group .desktop-textarea-label {
-  width: 100%;
-}
+  .desktop-group {
+    flex-direction: column;
+  }
+  .desktop-group .desktop-textarea-label {
+    width: 100%;
+  }
 }
